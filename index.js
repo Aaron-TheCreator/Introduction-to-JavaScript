@@ -2,10 +2,30 @@
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
 
+let votingAge = 25;
+
+if (votingAge > 18) {
+    console.log(true);
+};
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+
+let myStuff = 42;
+
+let yrStuff = 31;
+
+console.log(` I have ${myStuff} and you have ${yrStuff} .`)
+
+if (myStuff > yrStuff && yrStuff > 30) {
+    myStuff = myStuff + (yrStuff/7) * (13/yrStuff);
+    console.log(` Now, I have ${myStuff} and you have ${yrStuff} .`)
+} else if (myStuff > yrStuff && yrStuff < 30) {
+    myStuff = myStuff + (66-myStuff);
+    yrStuff = yrStuff + (33-yrStuff)
+    console.log(`Now, I have ${myStuff} and you have ${yrStuff} .`)
+}
 
 
 
@@ -13,13 +33,18 @@
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+console.log(Number("1999"));
 
 
 
 //Task d: Write a function to multiply a*b 
 
+function simpleMult(a, b) {
+    let sum = a * b;
+    console.log(sum);
+}
 
+simpleMult(5,10);
 
 
 
@@ -27,7 +52,12 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears(age) {
+    let dogAge = age * 7;
+    console.log(`You are ${age} , and ${dogAge} in "dog years".`);
+}
 
+dogYears(25);
 
 
 
@@ -49,7 +79,27 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight,age) {
+    if (age >= 1 && weight > 15) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight / 50} lbs. of raw food.`);
+    } else if (age >= 1 && weight > 10) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .03} lbs. of raw food.`)
+    } else if (age >= 1 && weight > 5) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .04} lbs. of raw food.`)
+    } else if (age >= 1 && weight <= 5) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .05} lbs. of raw food.`)
+    } else if (age < 1 && age >= .58) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .04} lbs. of raw food.`)
+    } else if (age < 1 && age >= .33) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .05} lbs. of raw food.`)
+    } else if (age < 1 && age >= .16) {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .1} lbs. of raw food.`)
+    } else {
+        console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .1} lbs. of raw food.`)
+    }
+};
 
+dogFeeder(15, 1);
 
 
 
