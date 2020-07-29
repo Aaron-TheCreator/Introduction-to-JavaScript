@@ -159,7 +159,12 @@ kmToMiles(1);
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function ftToCent(ft) {
+    let centimeter = ft * 30.48;
+    console.log(`${ft} feet is ${centimeter} centimeters.`)
+}
 
+ftToCent(2);
 
 
 
@@ -168,22 +173,51 @@ kmToMiles(1);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(start) {
 
+    for (i= start; i > 0; i--) {
+        console.log(`${i} bottles of beer on the wall, ${i} bottles of beer. Take one down, pass it around, ${i-1} bottles of beer on the wall.`);
+    }
+};
+
+annoyingSong(99);
 
 
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
   
+function gradeCalc(grade) {
 
+    let finalGrade = undefined;
+
+    if (grade > 89) {
+        finalGrade = "A";
+        console.log(`You scored ${grade}% for a ${finalGrade}. Congratulations!`);
+    } else if (grade > 79) {
+        finalGrade = "B";
+        console.log(`You scored ${grade}% for a ${finalGrade}. Good Job!`);
+    } else if (grade > 69) {
+        finalGrade = "C";
+        console.log(`You scored ${grade}% for a ${finalGrade}. Keep Trying!`);
+    } else if (grade > 59) {
+        finalGrade = "D";
+        console.log(`You scored ${grade}% for a ${finalGrade}. Try Harder!`);
+    } else if ( grade < 59) {
+        finalGrade = "F";
+        console.log(`You scored ${grade}% for a ${finalGrade}. Try Again!`);
+    } else {
+        console.log("Incorrect input. Try again.")
+    };
+};
   
-  
+gradeCalc(88);  
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
