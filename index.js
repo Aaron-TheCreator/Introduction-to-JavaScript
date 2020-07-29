@@ -110,16 +110,52 @@ dogFeeder(15, 1);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function rockPaperScissors(choice) {
+
+    /* PICKS RANDOM 0-2 */
+    let picker = Math.floor(Math.random() * Math.floor(3));
+    
+    /*ROCK = 0 */
+    if (picker === 0 && choice === "rock") {
+        console.log(`You chose ${choice} and the computer chose Rock. It's a tie!`);
+    } else if (picker === 0 && choice === "paper") {
+        console.log(`You chose ${choice} and the computer chose Rock. Paper covers Rock. You win!`);
+    } else if (picker === 0 && choice === "scissors") {
+        console.log(`You chose ${choice} and the computer chose Rock. Rock crushes scissors. You Lose!`);
+    /*PAPER = 1 */
+    } else if (picker === 1 && choice === "rock") {
+        console.log(`You chose ${choice} and the computer chose Paper. Paper covers Rock. You lose!`);
+    } else if (picker === 1 && choice === "paper") {
+        console.log(`You chose ${choice} and the computer chose Paper. It's a tie. Try again!`);
+    } else if (picker === 1 && choice === "scissors") {
+        console.log(`You chose ${choice} and the computer chose Paper. Scissors cut Paper. You won!`);
+    /*SCISSORS =2 */    
+    } else if (picker === 2 && choice === "rock") {
+        console.log(`You chose ${choice} and the computer chose Scissors. Rock crushes scissors. You won!`);
+    } else if (picker === 2 && choice === "paper") {
+        console.log(`You chose ${choice} and the computer chose Scissors. Scissors cut paper. You lose!`);
+    } else if (picker === 2 && choice === "scissors") {
+        console.log(`You chose ${choice} and the computer chose Scissors. It's a tie!. Try again!`);
+    } else {
+        console.log("Incorrect input. Please try again.");
+    }
+    
+}  
+
+rockPaperScissors("paper");
   
-  
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kmToMiles(km) {
+    let miles = km / 1.609344;
+    console.log(`${km} kilometers is ${miles} miles.`);
+}
 
-
-
+kmToMiles(1);
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
